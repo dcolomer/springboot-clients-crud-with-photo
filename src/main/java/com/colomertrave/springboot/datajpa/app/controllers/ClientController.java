@@ -135,9 +135,7 @@ public class ClientController {
 		if(!photo.isEmpty()) {
 			
 			Long cliId = client.getId();
-			Client clientBD = clientService.findOne(cliId).get();
-			
-			String cliPhoto = clientBD.getPhoto();			
+			String cliPhoto = client.getPhoto();			
 			
 			// Si el cliente ya tenía una foto, entonces tenemos que eliminar la antigua
 			if (cliId != null && cliPhoto != null && cliPhoto.length() > 0) {
